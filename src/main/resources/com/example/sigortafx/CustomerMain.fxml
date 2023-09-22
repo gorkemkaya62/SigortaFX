@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sigortafx.Controllers.CustomerMainController">
+   <children>
+      <JFXButton fx:id="tumSigortalarBTN" layoutX="67.0" layoutY="113.0" onAction="#tumSigortalarPress" prefHeight="32.0" prefWidth="106.0" style="-fx-background-color: #b00cbf;" text="Tüm Sigortalar" textFill="WHITE" />
+      <JFXButton fx:id="kullanimlarımBTN" layoutX="184.0" layoutY="113.0" onAction="#kullanimlarımPress" prefHeight="32.0" prefWidth="106.0" style="-fx-background-color: #b00cbf;" text="Kullanımlarım" textFill="WHITE" />
+      <JFXListView fx:id="listView" layoutX="67.0" layoutY="162.0" prefHeight="400.0" prefWidth="233.0" />
+      <Label layoutX="67.0" layoutY="35.0" text="Ada Yazılıma Hoşgeldin" textFill="#b00cbf">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+      <Label fx:id="userNameTXT" layoutX="461.0" layoutY="41.0">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="trafikPane" layoutX="338.0" layoutY="162.0" prefHeight="400.0" prefWidth="503.0">
+         <children>
+            <Label fx:id="sigortaTURTXT1" layoutX="202.0" layoutY="25.0" text="TRAFİK" textFill="#b00cbf">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Label>
+            <Label layoutX="53.0" layoutY="99.0" prefHeight="32.0" prefWidth="133.0" text="Plaka Numarası:" textFill="#b00cbf">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="plateTXT" layoutX="202.0" layoutY="103.0" prefHeight="25.0" prefWidth="214.0" promptText="plaka numarası" />
+            <Label layoutX="53.0" layoutY="184.0" prefHeight="32.0" prefWidth="133.0" text="Araba Yılı:" textFill="#b00cbf">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="arabaYil" layoutX="202.0" layoutY="188.0" prefHeight="25.0" prefWidth="214.0" promptText="Tarih" />
+            <Label layoutX="53.0" layoutY="235.0" prefHeight="32.0" prefWidth="133.0" text="Teklif:" textFill="#b00cbf">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="teklifTrafikTXT" layoutX="202.0" layoutY="234.0">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Button fx:id="trafikBasvurBTN" layoutX="206.0" layoutY="307.0" mnemonicParsing="false" onAction="#trafikBasvurPress" prefHeight="25.0" prefWidth="97.0" style="-fx-background-color: #b00cbf;" text="Başvur" textFill="WHITE" />
+            <Label layoutX="53.0" layoutY="141.0" prefHeight="32.0" prefWidth="133.0" text="Araba Değeri:" textFill="#b00cbf">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="ArabaDegeriTXT" layoutX="202.0" layoutY="145.0" prefHeight="25.0" prefWidth="214.0" promptText="Araba Değeri" />
+            <Label fx:id="hataTrafik" layoutX="53.0" layoutY="280.0" textFill="RED" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="daskPane" layoutX="338.0" layoutY="162.0" prefHeight="400.0" prefWidth="503.0">
+         <children>
+            <Label fx:id="sigortaTURTXT" layoutX="213.0" layoutY="22.0" text="DASK" textFill="#b00cbf">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Label>
+            <Label layoutX="50.0" layoutY="164.0" text="Ev Adresi: " textFill="#b00cbf">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="48.0" layoutY="291.0" text="Depreme Dayanıklı mı?" textFill="#b00cbf">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="evetRadioButton" layoutX="256.0" layoutY="295.0" mnemonicParsing="false" text="Evet" />
+            <RadioButton fx:id="HayirRadioButon" layoutX="324.0" layoutY="295.0" mnemonicParsing="false" text="Hayır" />
+            <JFXTextArea fx:id="adresTXT" layoutX="170.0" layoutY="125.0" prefHeight="103.0" prefWidth="260.0" />
+            <Label layoutX="48.0" layoutY="324.0" text="TEKLİF: " textFill="#b00cbf">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="teklifTXT" layoutX="108.0" layoutY="327.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="basvurBTN" layoutX="203.0" layoutY="361.0" onAction="#basvurPress" prefHeight="25.0" prefWidth="97.0" style="-fx-background-color: #b00cbf;" text="Başvur" textFill="WHITE" />
+            <Label layoutX="48.0" layoutY="254.0" text="Ev Değeri: " textFill="#b00cbf">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="evDegeriTXT" layoutX="170.0" layoutY="255.0" prefHeight="25.0" prefWidth="260.0" />
+            <Label fx:id="hataTXT" layoutX="48.0" layoutY="365.0" textFill="RED" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="showUsesPane" layoutX="338.0" layoutY="162.0" prefHeight="400.0" prefWidth="503.0">
+         <children>
+            <ImageView fitHeight="180.0" fitWidth="200.0" layoutX="152.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@adaYazilim.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="106.0" layoutY="234.0" text="Güncel Teklif" textFill="#0036e8">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Label>
+            <Label fx:id="guncelTeklifTXT" layoutX="296.0" layoutY="230.0">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <JFXListView fx:id="listViewUses" layoutX="68.0" layoutY="162.0" prefHeight="400.0" prefWidth="233.0" />
+      <ImageView fitHeight="121.0" fitWidth="133.0" layoutX="746.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@adaYazilim.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="logoutBTN" layoutX="628.0" layoutY="29.0" mnemonicParsing="false" onAction="#logoutPress" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: #b00cbf;" text="Çıkış" textFill="WHITE" />
+   </children>
+</AnchorPane>

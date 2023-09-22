@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sigortafx.Controllers.HelloController">
+   <children>
+      <Label layoutX="392.0" layoutY="73.0" text="LOGIN" textFill="#b00cbf">
+         <font>
+            <Font size="40.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <TextField fx:id="emailTXT" layoutX="259.0" layoutY="191.0" prefHeight="32.0" prefWidth="383.0" promptText="Email" />
+      <PasswordField fx:id="passwordTXT" layoutX="259.0" layoutY="261.0" prefHeight="32.0" prefWidth="383.0" promptText="Password" />
+      <JFXButton fx:id="loginBTN" layoutX="341.0" layoutY="369.0" onAction="#loginPress" prefHeight="32.0" prefWidth="102.0" style="-fx-background-color: #b00cbf;" text="LOGIN" textFill="WHITE" />
+      <JFXButton fx:id="registerBTN" layoutX="458.0" layoutY="369.0" onAction="#registerPress" prefHeight="32.0" prefWidth="102.0" style="-fx-background-color: #b00cbf;" text="REGISTER" textFill="WHITE" />
+      <Label fx:id="statusTXT" layoutX="259.0" layoutY="323.0" textFill="RED" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="383.0" layoutY="421.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@adaYazilim.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

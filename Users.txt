@@ -1,0 +1,2 @@
+gorkem	kaya	gorkem@gmail.com	123	34baz367	null	null	false	false	0.0	17000.0	false	Trafik Sigorta
+aysel	kaya	aysel@gmail.com	1234	34baz367	cekmekoy	null	false	false	140000.0	17000.0	false	Dask Sigorta	Trafik Sigorta
